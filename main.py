@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-filenumb = "01"
+filenumb = "03"
 file = open("signals/signal" + filenumb + ".dat").read()
 def move_filt(a, n = 10):
     k = []
@@ -19,4 +19,4 @@ plt.title("input signal" + filenumb)
 plt.subplot(2,1,2)
 plt.plot(x, move_filt(sig))
 plt.title("Filtered")
-plt.show()
+plt.savefig("sig" + filenumb + "res.jpg")
